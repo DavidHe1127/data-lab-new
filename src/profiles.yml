@@ -1,0 +1,9 @@
+data-lab-new:
+  outputs:
+   dev:
+     type: duckdb
+     path: '../source_data/nyc_parking_violations.db'
+   prod:
+     type: duckdb
+     path: '../source_data/prod_nyc_parking_violations.db'  
+  target: dev

@@ -1,0 +1,4 @@
+dbt-duckdb==1.10.0
+duckdb==1.4.3
+dbt-core==1.10.18
+pandas==2.2.3
