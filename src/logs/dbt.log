@@ -1,0 +1,213 @@
+[0m14:23:52.125998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108767af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097d95b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097d93d0>]}
+
+
+============================== 14:23:52.129017 | 17b1b4d0-d520-4a8e-9856-ed437b81f673 ==============================
+[0m14:23:52.129017 [info ] [MainThread]: Running with dbt=1.10.18
+[0m14:23:52.129530 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'no_print': 'None', 'version_check': 'True', 'write_json': 'True', 'fail_fast': 'False', 'debug': 'False', 'profiles_dir': '/Users/davidhe/data-lab-new/src', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'use_colors': 'True', 'log_format': 'default', 'partial_parse': 'True', 'invocation_command': 'dbt seed', 'log_path': '/Users/davidhe/data-lab-new/src/logs', 'log_cache_events': 'False', 'empty': 'None', 'introspect': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'printer_width': '80'}
+[0m14:23:52.269025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098d3b50>]}
+[0m14:23:52.296757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109776ac0>]}
+[0m14:23:52.298411 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m14:23:52.355054 [debug] [MainThread]: checksum: 9646db7d1a5f5b9389d9c545d3ebf898b26bc1f63f6b5366f34a6af01d52cb91, vars: {}, profile: , target: , version: 1.10.18
+[0m14:23:52.425449 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:23:52.425688 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:23:52.429303 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.jaffle_shop
+- data_tests
+[0m14:23:52.438462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109da1130>]}
+[0m14:23:52.472954 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/davidhe/data-lab-new/src/target/manifest.json
+[0m14:23:52.475990 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/davidhe/data-lab-new/src/target/semantic_manifest.json
+[0m14:23:52.491941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109da9c70>]}
+[0m14:23:52.492259 [info ] [MainThread]: Found 3 seeds, 456 macros
+[0m14:23:52.492447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d90eb0>]}
+[0m14:23:52.493161 [info ] [MainThread]: 
+[0m14:23:52.493322 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:23:52.493450 [info ] [MainThread]: 
+[0m14:23:52.493705 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:23:52.496216 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lab'
+[0m14:23:52.605765 [debug] [ThreadPool]: Using duckdb connection "list_lab"
+[0m14:23:52.606059 [debug] [ThreadPool]: On list_lab: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "connection_name": "list_lab"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lab"'
+    
+  
+  
+[0m14:23:52.606235 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:23:52.611597 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m14:23:52.612200 [debug] [ThreadPool]: On list_lab: Close
+[0m14:23:52.612596 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab, now create_lab_main)
+[0m14:23:52.612917 [debug] [ThreadPool]: Creating schema "database: "lab"
+schema: "main"
+"
+[0m14:23:52.616844 [debug] [ThreadPool]: Using duckdb connection "create_lab_main"
+[0m14:23:52.617050 [debug] [ThreadPool]: On create_lab_main: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "connection_name": "create_lab_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='lab'
+        and type='sqlite'
+    
+  
+[0m14:23:52.617180 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:23:52.617654 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:23:52.618260 [debug] [ThreadPool]: Using duckdb connection "create_lab_main"
+[0m14:23:52.618393 [debug] [ThreadPool]: On create_lab_main: BEGIN
+[0m14:23:52.618593 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:23:52.618706 [debug] [ThreadPool]: Using duckdb connection "create_lab_main"
+[0m14:23:52.618818 [debug] [ThreadPool]: On create_lab_main: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "connection_name": "create_lab_main"} */
+
+    
+    
+        create schema if not exists "lab"."main"
+    
+[0m14:23:52.619014 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:23:52.619335 [debug] [ThreadPool]: On create_lab_main: COMMIT
+[0m14:23:52.619464 [debug] [ThreadPool]: Using duckdb connection "create_lab_main"
+[0m14:23:52.619580 [debug] [ThreadPool]: On create_lab_main: COMMIT
+[0m14:23:52.619756 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:23:52.619900 [debug] [ThreadPool]: On create_lab_main: Close
+[0m14:23:52.620415 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_lab_main, now list_lab_main)
+[0m14:23:52.623204 [debug] [ThreadPool]: Using duckdb connection "list_lab_main"
+[0m14:23:52.623365 [debug] [ThreadPool]: On list_lab_main: BEGIN
+[0m14:23:52.623484 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:23:52.623707 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:23:52.623829 [debug] [ThreadPool]: Using duckdb connection "list_lab_main"
+[0m14:23:52.623961 [debug] [ThreadPool]: On list_lab_main: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "connection_name": "list_lab_main"} */
+select
+      'lab' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'lab'
+  
+[0m14:23:52.627989 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m14:23:52.628533 [debug] [ThreadPool]: On list_lab_main: ROLLBACK
+[0m14:23:52.629489 [debug] [ThreadPool]: Failed to rollback 'list_lab_main'
+[0m14:23:52.629659 [debug] [ThreadPool]: On list_lab_main: Close
+[0m14:23:52.630197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072151f0>]}
+[0m14:23:52.630417 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:23:52.630550 [debug] [MainThread]: On master: BEGIN
+[0m14:23:52.630684 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:23:52.630947 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:23:52.631057 [debug] [MainThread]: On master: COMMIT
+[0m14:23:52.631163 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:23:52.631268 [debug] [MainThread]: On master: COMMIT
+[0m14:23:52.631431 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:23:52.631541 [debug] [MainThread]: On master: Close
+[0m14:23:52.632768 [debug] [Thread-1  ]: Began running node seed.data_lab_new.raw_customers
+[0m14:23:52.633000 [info ] [Thread-1  ]: 1 of 3 START seed file main.raw_customers ...................................... [RUN]
+[0m14:23:52.633205 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_lab_main, now seed.data_lab_new.raw_customers)
+[0m14:23:52.633396 [debug] [Thread-1  ]: Began compiling node seed.data_lab_new.raw_customers
+[0m14:23:52.633532 [debug] [Thread-1  ]: Began executing node seed.data_lab_new.raw_customers
+[0m14:23:52.647372 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_customers"
+[0m14:23:52.647670 [debug] [Thread-1  ]: On seed.data_lab_new.raw_customers: BEGIN
+[0m14:23:52.647835 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:23:52.648229 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.648413 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_customers"
+[0m14:23:52.648551 [debug] [Thread-1  ]: On seed.data_lab_new.raw_customers: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "node_id": "seed.data_lab_new.raw_customers"} */
+truncate table "lab"."main"."raw_customers"
+[0m14:23:52.648921 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.654087 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_customers"
+[0m14:23:52.654245 [debug] [Thread-1  ]: On seed.data_lab_new.raw_customers: 
+          COPY "lab"."main"."raw_customers" FROM '/Users/davidhe/data-lab-new/src/seeds/raw_customers.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m14:23:52.656360 [debug] [Thread-1  ]: SQL status: OK in 0.002 seconds
+[0m14:23:52.659244 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.data_lab_new.raw_customers"
+[0m14:23:52.667354 [debug] [Thread-1  ]: On seed.data_lab_new.raw_customers: COMMIT
+[0m14:23:52.667692 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_customers"
+[0m14:23:52.667841 [debug] [Thread-1  ]: On seed.data_lab_new.raw_customers: COMMIT
+[0m14:23:52.668686 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m14:23:52.669579 [debug] [Thread-1  ]: On seed.data_lab_new.raw_customers: Close
+[0m14:23:52.670459 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109db3370>]}
+[0m14:23:52.670687 [info ] [Thread-1  ]: 1 of 3 OK loaded seed file main.raw_customers .................................. [[32mINSERT 100[0m in 0.04s]
+[0m14:23:52.670935 [debug] [Thread-1  ]: Finished running node seed.data_lab_new.raw_customers
+[0m14:23:52.671104 [debug] [Thread-1  ]: Began running node seed.data_lab_new.raw_orders
+[0m14:23:52.671343 [info ] [Thread-1  ]: 2 of 3 START seed file main.raw_orders ......................................... [RUN]
+[0m14:23:52.671540 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.data_lab_new.raw_customers, now seed.data_lab_new.raw_orders)
+[0m14:23:52.671694 [debug] [Thread-1  ]: Began compiling node seed.data_lab_new.raw_orders
+[0m14:23:52.671843 [debug] [Thread-1  ]: Began executing node seed.data_lab_new.raw_orders
+[0m14:23:52.677089 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_orders"
+[0m14:23:52.677291 [debug] [Thread-1  ]: On seed.data_lab_new.raw_orders: BEGIN
+[0m14:23:52.677428 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:23:52.677728 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.677890 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_orders"
+[0m14:23:52.678032 [debug] [Thread-1  ]: On seed.data_lab_new.raw_orders: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "node_id": "seed.data_lab_new.raw_orders"} */
+truncate table "lab"."main"."raw_orders"
+[0m14:23:52.678333 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.678947 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_orders"
+[0m14:23:52.679092 [debug] [Thread-1  ]: On seed.data_lab_new.raw_orders: 
+          COPY "lab"."main"."raw_orders" FROM '/Users/davidhe/data-lab-new/src/seeds/raw_orders.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m14:23:52.682651 [debug] [Thread-1  ]: SQL status: OK in 0.003 seconds
+[0m14:23:52.683232 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.data_lab_new.raw_orders"
+[0m14:23:52.686634 [debug] [Thread-1  ]: On seed.data_lab_new.raw_orders: COMMIT
+[0m14:23:52.686802 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_orders"
+[0m14:23:52.686936 [debug] [Thread-1  ]: On seed.data_lab_new.raw_orders: COMMIT
+[0m14:23:52.687364 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.687724 [debug] [Thread-1  ]: On seed.data_lab_new.raw_orders: Close
+[0m14:23:52.688030 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081b29d0>]}
+[0m14:23:52.688290 [info ] [Thread-1  ]: 2 of 3 OK loaded seed file main.raw_orders ..................................... [[32mINSERT 99[0m in 0.02s]
+[0m14:23:52.688537 [debug] [Thread-1  ]: Finished running node seed.data_lab_new.raw_orders
+[0m14:23:52.688711 [debug] [Thread-1  ]: Began running node seed.data_lab_new.raw_payments
+[0m14:23:52.688964 [info ] [Thread-1  ]: 3 of 3 START seed file main.raw_payments ....................................... [RUN]
+[0m14:23:52.689160 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.data_lab_new.raw_orders, now seed.data_lab_new.raw_payments)
+[0m14:23:52.689315 [debug] [Thread-1  ]: Began compiling node seed.data_lab_new.raw_payments
+[0m14:23:52.689454 [debug] [Thread-1  ]: Began executing node seed.data_lab_new.raw_payments
+[0m14:23:52.693299 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_payments"
+[0m14:23:52.693478 [debug] [Thread-1  ]: On seed.data_lab_new.raw_payments: BEGIN
+[0m14:23:52.693611 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:23:52.693902 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.694048 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_payments"
+[0m14:23:52.694181 [debug] [Thread-1  ]: On seed.data_lab_new.raw_payments: /* {"app": "dbt", "dbt_version": "1.10.18", "profile_name": "data-lab-new", "target_name": "dev", "node_id": "seed.data_lab_new.raw_payments"} */
+truncate table "lab"."main"."raw_payments"
+[0m14:23:52.694455 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.694945 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_payments"
+[0m14:23:52.695090 [debug] [Thread-1  ]: On seed.data_lab_new.raw_payments: 
+          COPY "lab"."main"."raw_payments" FROM '/Users/davidhe/data-lab-new/src/seeds/raw_payments.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m14:23:52.696183 [debug] [Thread-1  ]: SQL status: OK in 0.001 seconds
+[0m14:23:52.696458 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.data_lab_new.raw_payments"
+[0m14:23:52.699142 [debug] [Thread-1  ]: On seed.data_lab_new.raw_payments: COMMIT
+[0m14:23:52.699350 [debug] [Thread-1  ]: Using duckdb connection "seed.data_lab_new.raw_payments"
+[0m14:23:52.699498 [debug] [Thread-1  ]: On seed.data_lab_new.raw_payments: COMMIT
+[0m14:23:52.700011 [debug] [Thread-1  ]: SQL status: OK in 0.000 seconds
+[0m14:23:52.700371 [debug] [Thread-1  ]: On seed.data_lab_new.raw_payments: Close
+[0m14:23:52.700661 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '17b1b4d0-d520-4a8e-9856-ed437b81f673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a27b940>]}
+[0m14:23:52.700917 [info ] [Thread-1  ]: 3 of 3 OK loaded seed file main.raw_payments ................................... [[32mINSERT 113[0m in 0.01s]
+[0m14:23:52.701159 [debug] [Thread-1  ]: Finished running node seed.data_lab_new.raw_payments
+[0m14:23:52.701675 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:23:52.701812 [debug] [MainThread]: On master: BEGIN
+[0m14:23:52.701921 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:23:52.702159 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:23:52.702284 [debug] [MainThread]: On master: COMMIT
+[0m14:23:52.702404 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:23:52.702517 [debug] [MainThread]: On master: COMMIT
+[0m14:23:52.702692 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:23:52.702826 [debug] [MainThread]: On master: Close
+[0m14:23:52.702984 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:23:52.703088 [debug] [MainThread]: Connection 'seed.data_lab_new.raw_payments' was properly closed.
+[0m14:23:52.703217 [info ] [MainThread]: 
+[0m14:23:52.703352 [info ] [MainThread]: Finished running 3 seeds in 0 hours 0 minutes and 0.21 seconds (0.21s).
+[0m14:23:52.703756 [debug] [MainThread]: Command end result
+[0m14:23:52.721965 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/davidhe/data-lab-new/src/target/manifest.json
+[0m14:23:52.725703 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/davidhe/data-lab-new/src/target/semantic_manifest.json
+[0m14:23:52.736607 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/davidhe/data-lab-new/src/target/run_results.json
+[0m14:23:52.736949 [info ] [MainThread]: 
+[0m14:23:52.737365 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:23:52.737546 [info ] [MainThread]: 
+[0m14:23:52.737815 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m14:23:52.739397 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 0.6570843, "process_in_blocks": "0", "process_kernel_time": 0.221268, "process_mem_max_rss": "144916480", "process_out_blocks": "0", "process_user_time": 1.047295}
+[0m14:23:52.739642 [debug] [MainThread]: Command `dbt seed` succeeded at 14:23:52.739597 after 0.66 seconds
+[0m14:23:52.739837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108767af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098e12e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cc22b0>]}
+[0m14:23:52.740030 [debug] [MainThread]: Flushing usage events
+[0m14:23:53.890164 [debug] [MainThread]: An error was encountered while trying to flush usage events

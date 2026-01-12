@@ -1,4 +1,4 @@
-name: 'nyc_parking_violations'
+name: 'data_lab_new'
 version: '1.0.0'
 config-version: 2
 
@@ -15,30 +15,8 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
 models:
-  nyc_parking_violations:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: ephemeral
-    bronze:
-      +materialized: view
-    silver:
-      silver_parking_violation_codes:
-        +materialized: ephemeral
-      silver_parking_violations:
-        +materialized: ephemeral
-      silver_violation_tickets:
-        +materialized: view
-      silver_violation_vehicles:
-        +materialized: view
-    gold:
-      +materialized: table
+  jaffle_shop:
+    +materialized: table
 tests:
   +store_failures: true
